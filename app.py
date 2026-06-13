@@ -100,7 +100,7 @@ def transcribe_audio(audio_file_path, model_size, language):
         segments, info = model.transcribe(
             audio_file_path,
             language=lang_param,
-            beam_size=5  # Default beam size for good accuracy,
+            beam_size=5,
             vad_filter=True
         )
         
