@@ -98,15 +98,12 @@ def transcribe_audio(audio_file_path, model_size, language):
         lang_param = None if (not language or language == "auto") else language
         
         print(f"Transcribing ... be patient")
-        prompt="Please transcribe this audio file. Accuracy is paramount. Minimize repetitions. Do not halucinate. Spell accurately foreign names and words."
         segments, info = model.transcribe(
             audio_file_path,
             beam_size=5,
-            initial_prompt=prompt,
             language=lang_param,
             log_progress=True,
-            repetition_penalty=1.6,
-            temperature=0.2,
+            temperature=0.0,
             vad_filter=True
         )
         
