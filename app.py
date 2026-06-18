@@ -148,6 +148,7 @@ def get_user_input():
             continue
     
     # Get language preference
+    '''
     while True:
         print("\nLanguage options:")
         print("- auto: Auto-detect language")
@@ -168,7 +169,8 @@ def get_user_input():
             break
         else:
             print("Please enter a valid language code")
-    
+    '''
+    language = 'ro'
     # Get model size preference
     while True:
         print("\nAvailable models:")
@@ -176,7 +178,7 @@ def get_user_input():
         print("2. base - Good balance (~74 MB) [recommended]")
         print("3. small - Better accuracy (~244 MB)")
         print("4. medium - High accuracy (~769 MB)")
-        print("5. large - Highest accuracy, slowest (~1550 MB)")
+        print("5. large-v3 - Highest accuracy, slowest (~2.9 GB)")
         
         choice = input("Select model (1-5) or press Enter for auto-selection: ").strip()
         
