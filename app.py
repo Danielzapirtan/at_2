@@ -103,7 +103,6 @@ def transcribe_audio(audio_file_path, model_size, language):
             beam_size=5,
             language=lang_param,
             log_progress=True,
-            temperature=0.0,
             vad_filter=True
         )
         
