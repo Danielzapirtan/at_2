@@ -191,7 +191,7 @@ def get_user_input():
                 print(f"Auto-selected 'medium' model for better multilingual support")
             break
         elif choice in ['1', '2', '3', '4', '5']:
-            models = ['tiny', 'base', 'small', 'medium', 'large']
+            models = ['tiny', 'base', 'small', 'medium', 'large-v3']
             model_size = models[int(choice) - 1]
             print(f"Selected '{model_size}' model")
             break
