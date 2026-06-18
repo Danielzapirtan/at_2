@@ -97,6 +97,7 @@ def transcribe_audio(audio_file_path, model_size, language):
         # language=None means auto-detect
         lang_param = None if (not language or language == "auto") else language
         
+        print(f"Transcribing ... be patient")
         segments, info = model.transcribe(
             audio_file_path,
             language=lang_param,
