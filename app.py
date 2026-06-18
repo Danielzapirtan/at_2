@@ -101,7 +101,7 @@ def transcribe_audio(audio_file_path, model_size, language):
         segments, info = model.transcribe(
             audio_file_path,
             language=lang_param,
-            log_progress=True
+            log_progress=True,
             beam_size=5,
             vad_filter=True
         )
