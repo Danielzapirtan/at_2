@@ -145,7 +145,7 @@ def get_user_input():
     
     language = 'ro'
     # Get model size preference
-    model_size = 'TransferRapid/whisper-large-v3-turbo_ro'
+    model_size = "TransferRapid/whisper-large-v3-turbo_ro"
     
     return validated_path, language, model_size
 
