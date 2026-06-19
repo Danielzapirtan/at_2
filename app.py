@@ -176,14 +176,14 @@ def get_user_input():
         print("4. medium - High accuracy (~769 MB)")
         print("5. large-v3 - Highest accuracy, slowest (~2.9 GB)")
         
-        choice = input("Select model (1-5) or press Enter for auto-selection: ").strip()
-        
+        #choice = input("Select model (1-5) or press Enter for auto-selection: ").strip()
+        choice = ''
         if choice == '':
             if language == 'en':
                 model_size = 'base'
                 print(f"Auto-selected 'base' model for English")
             else:
-                model_size = 'medium'
+                model_size = 'TransferRapid/whisper-large-v3-turbo_ro'
                 print(f"Auto-selected 'medium' model for better multilingual support")
             break
         elif choice in ['1', '2', '3', '4', '5']:
