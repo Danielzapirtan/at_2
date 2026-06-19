@@ -29,7 +29,7 @@ def load_whisper_model(model_size):
             # Faster-Whisper uses compute_type for optimization
             # "int8" is a good default for GPU; use "int8_float16" for better GPU performance
             # or "int8" for CPU/GPU compatibility
-            current_model = WhisperModel(model_size, device="cuda", compute_type="int8_float16")
+            current_model = WhisperModel("TransferRapid/whisper-large-v3-turbo_ro", device="cuda", compute_type="_float16")
             current_model_size = model_size
             print(f"✅ Successfully loaded {model_size} model")
         except Exception as e:
