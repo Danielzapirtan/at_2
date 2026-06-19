@@ -143,56 +143,9 @@ def get_user_input():
             print(f"❌ {str(e)}")
             continue
     
-    # Get language preference
-    '''
-    while True:
-        print("\nLanguage options:")
-        print("- auto: Auto-detect language")
-        print("- en: English")
-        print("- ro: Romanian")
-        print("- es: Spanish")
-        print("- fr: French")
-        print("- de: German")
-        print("- it: Italian")
-        print("- pt: Portuguese")
-        print("- ru: Russian")
-        print("- ja: Japanese")
-        print("- ko: Korean")
-        print("- zh: Chinese")
-        
-        language = input("Enter language code (auto/en/ro/es/fr/de/it/pt/ru/ja/ko/zh): ").strip().lower()
-        if language in VALID_LANGUAGES:
-            break
-        else:
-            print("Please enter a valid language code")
-    '''
     language = 'ro'
     # Get model size preference
-    while True:
-        print("\nAvailable models:")
-        print("1. tiny - Fastest, least accurate (~39 MB)")
-        print("2. base - Good balance (~74 MB) [recommended]")
-        print("3. small - Better accuracy (~244 MB)")
-        print("4. medium - High accuracy (~769 MB)")
-        print("5. large-v3 - Highest accuracy, slowest (~2.9 GB)")
-        
-        #choice = input("Select model (1-5) or press Enter for auto-selection: ").strip()
-        choice = ''
-        if choice == '':
-            if language == 'en':
-                model_size = 'base'
-                print(f"Auto-selected 'base' model for English")
-            else:
-                model_size = 'TransferRapid/whisper-large-v3-turbo_ro'
-                print(f"Auto-selected 'medium' model for better multilingual support")
-            break
-        elif choice in ['1', '2', '3', '4', '5']:
-            models = ['tiny', 'base', 'small', 'medium', 'large-v3']
-            model_size = models[int(choice) - 1]
-            print(f"Selected '{model_size}' model")
-            break
-        else:
-            print("Please enter a number 1-5 or press Enter")
+    model_size = 'TransferRapid/whisper-large-v3-turbo_ro'
     
     return validated_path, language, model_size
 
