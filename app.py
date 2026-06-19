@@ -145,8 +145,6 @@ def get_user_input():
     
     language = 'ro'
     # Get model size preference
-    from huggingface_hub import snapshot_download
-
     model_size = "TransferRapid/whisper-large-v3-turbo_ro"
     
     return validated_path, language, model_size
